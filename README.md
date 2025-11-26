@@ -26,6 +26,7 @@ Sistema backend desarrollado en **Spring Boot** para la gestión de finanzas per
 - **PostgreSQL**
 - **Swagger / Springdoc OpenAPI**
 - **Lombok**
+- **Spring Security + JWT**
 
 ---
 
@@ -43,6 +44,17 @@ La API cuenta con documentación interactiva disponible en tiempo de ejecución:
 
 ## 🗂️ Endpoints por módulo
 
+### 📁 **Usuarios**
+Gestión de usuarios, perfil y saldo actual.
+
+![Usuarios endpoints](assets/swagger-usuarios.png)
+
+### 📁 **Autenticacion**
+Iniciar sesión y obtener un token JWT
+
+![Autenticacion endpoints](assets/swagger-autenticacion.png)
+
+
 ### 📁 **Categorías**
 CRUD de categorías financieras.
 
@@ -57,10 +69,13 @@ CRUD de ingresos y gastos asociados a cada usuario.
 
 ---
 
-### 📁 **Usuarios**
-Gestión de usuarios, perfil y saldo actual.
+### 📁 **Bases de datos postgres**
+Base de datos.
 
-![Usuarios endpoints](assets/swagger-usuarios.png)
+![Transacciones endpoints](assets/bd-finanzas.png)
+
+---
+
 
 
 

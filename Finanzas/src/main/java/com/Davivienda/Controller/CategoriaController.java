@@ -5,6 +5,7 @@ import com.Davivienda.DTO.CategoriaDTO;
 import com.Davivienda.DTO.CategoriaRequestDTO;
 import com.Davivienda.service.CategoriaService;
 import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.security.SecurityRequirement;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
@@ -17,10 +18,13 @@ import java.util.UUID;
  * CONTROLADOR DE CATEGORÍAS
  * Gestiona la creación y consulta de categorías por usuario.
  */
+
 @RestController
 @RequestMapping("/api/categorias")
 @RequiredArgsConstructor
-@Tag(name = "Categorías", description = "Gestión de categorías")
+
+@Tag(name = "3. Categorías", description = "CRUD de categorías del usuario")
+
 public class CategoriaController {
 
 private final CategoriaService categoriaService;

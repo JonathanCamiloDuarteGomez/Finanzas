@@ -6,6 +6,7 @@ import com.Davivienda.DTO.UsuarioDTO;
 import com.Davivienda.DTO.UsuarioRegistroDTO;
 import com.Davivienda.service.UsuarioService;
 import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.security.SecurityRequirement;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
@@ -23,7 +24,8 @@ import java.util.UUID;
 @RestController
 @RequestMapping("/api/usuarios")
 @RequiredArgsConstructor
-@Tag(name = "Usuarios", description = "Gestión de usuarios y perfil")
+@Tag(name = "1. Registro de Usuario", description = "Crear nuevos usuarios en la plataforma")
+
 public class UsuarioController {
 
 private final UsuarioService usuarioService;
@@ -40,6 +42,7 @@ public ResponseEntity<UsuarioDTO> registrar(@RequestBody UsuarioRegistroDTO dto)
 /**
  * Obtener usuario por ID
  */
+
 @Operation(summary = "Obtener usuario por ID")
 @GetMapping("/{id}")
 public ResponseEntity<UsuarioDTO> obtener(@PathVariable UUID id) {
@@ -49,6 +52,7 @@ public ResponseEntity<UsuarioDTO> obtener(@PathVariable UUID id) {
 /**
  * Actualizar datos del perfil del usuario
  */
+
 @Operation(summary = "Actualizar perfil del usuario")
 @PutMapping("/{id}")
 public ResponseEntity<UsuarioDTO> actualizar(
@@ -61,6 +65,7 @@ public ResponseEntity<UsuarioDTO> actualizar(
 /**
  * Obtener el saldo completo de un usuario
  */
+
 @Operation(summary = "Obtener saldo del usuario")
 @GetMapping("/{usuarioId}/saldo")
 public ResponseEntity<SaldoResponseDTO> obtenerSaldo(@PathVariable UUID usuarioId) {

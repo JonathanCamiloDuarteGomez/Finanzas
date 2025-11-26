@@ -9,7 +9,7 @@ import lombok.Setter;
 public class LoginRequestDTO {//DTO del Login / JWT
 
 @NotBlank(message = "El correo es obligatorio.")
-private String correo;
+private String email;
 
 @NotBlank(message = "La contraseña es obligatoria.")
 private String clave;

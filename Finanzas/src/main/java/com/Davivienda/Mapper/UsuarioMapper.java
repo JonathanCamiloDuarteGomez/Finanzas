@@ -28,7 +28,7 @@ UsuarioDTO toDTO(Usuario usuario);
 //@Mapping(target = "email", source = "email")
 @Mapping(target = "id", ignore = true)
 @Mapping(target = "claveHash", ignore = true)
-@Mapping(target = "roles", ignore = true)
+@Mapping(target = "roles", expression = "java(java.util.List.of(\"USER\"))")
 @Mapping(target = "categorias", ignore = true)
 @Mapping(target = "transacciones", ignore = true)
 @Mapping(target = "creadoEn", expression = "java(java.time.LocalDateTime.now())")

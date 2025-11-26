@@ -31,8 +31,11 @@ private String claveHash;
 @Column(name = "nombre_completo")
 private String nombreCompleto;
 
-@Column(name = "roles")
-private String roles;
+@ElementCollection(fetch = FetchType.EAGER)
+@CollectionTable(name = "usuario_roles", joinColumns = @JoinColumn(name = "usuario_id"))
+@Column(name = "rol")
+private List<String> roles = new ArrayList<>();
+
 
 @Column(name = "creado_en")
 private LocalDateTime creadoEn = LocalDateTime.now();
