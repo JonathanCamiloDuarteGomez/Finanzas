@@ -12,6 +12,7 @@ Sistema backend desarrollado en **Spring Boot** para la gestión de finanzas per
 - Documentación interactiva con Swagger UI
 - Arquitectura limpia basada en DTOs, Servicios, Controladores y Mappers (MapStruct)
 - Base de datos PostgreSQL
+- JWT
 
 ---
 
